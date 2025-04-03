@@ -1,0 +1,281 @@
+.entity-selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f9fc;
+  }
+  
+  .entity-selection-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .entity-selection-card h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .entity-selection-card p {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+  }
+  
+  .entity-selection-card h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .entity-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .entity-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .entity-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .login-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1;
+  }
+  
+  .login-button {
+    background-color: transparent;
+    color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .login-button:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .entity-selection-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .entity-selection-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .welcome-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-section h2 {
+    font-size: 28px;
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-section p {
+    color: #6b7280;
+    font-size: 16px;
+  }
+  .tab-group {
+    display: inline-flex;
+    position: relative;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 50px;
+    border: 1px solid #e5e7eb;
+    padding: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab-button {
+    padding: 10px 24px;
+    border: none;
+    background: transparent;
+    color: #4b5563;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    border-radius: 50px;
+    margin: 0 -8px; /* Overlap buttons slightly */
+  }
+  
+  /* Active button styles */
+  .tab-button.active {
+    background: #3498db;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Bring active button to front */
+  }
+  
+  /* Hover effect for inactive buttons */
+  .tab-button:not(.active):hover {
+    color: #3498db;
+  }
+  
+  /* First button adjustment */
+  .tab-button:first-child {
+    margin-left: 0;
+  }
+  
+  /* Last button adjustment */
+  .tab-button:last-child {
+    margin-right: 0;
+  }  
+  .form-section {
+    margin-bottom: 30px;
+  }
+  
+  .form-content {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .form-content h3 {
+    font-size: 20px;
+    color: #1f2937;
+    margin-bottom: 10px;
+  }
+  
+  .form-content p {
+    color: #6b7280;
+    margin-bottom: 20px;
+  }
+  
+  .continue-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #4f46e5;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .continue-button:hover {
+    background: #4338ca;
+  }
+  
+  .login-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .login-section p {
+    color: #6b7280;
+    margin-bottom: 10px;
+  }
+  
+  .login-button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #374151;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background: #f3f4f6;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left; /* This ensures all content in form-group is left-aligned */
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+    text-align: left; /* Explicitly left-align the labels */
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: left; /* Left-align the input text */
+  }
+  
+  .register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    width: auto; /* Remove full width */
+    margin-top: 10px;
+  }
+  
+  .register-button:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .register-button:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+    cursor: not-allowed;
+  }
+  
+  
