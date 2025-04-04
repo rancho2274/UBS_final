@@ -1,9 +1,11 @@
+// frontend/src/components/dashboard/NewClassForm.js
 import React, { useState } from 'react';
 
 const NewClassForm = ({ onClose, onSubmit }) => {
   const [formData, setFormData] = useState({
     name: '',
-    subject: ''
+    subject: '',
+    syllabus: null
   });
 
   const handleChange = (e) => {
@@ -13,9 +15,25 @@ const NewClassForm = ({ onClose, onSubmit }) => {
     });
   };
 
+  const handleFileChange = (e) => {
+    setFormData({
+      ...formData,
+      syllabus: e.target.files[0]
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    
+    // Create a FormData object to handle file upload
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append('name', formData.name);
+    formDataToSubmit.append('subject', formData.subject);
+    if (formData.syllabus) {
+      formDataToSubmit.append('syllabus', formData.syllabus);
+    }
+
+    onSubmit(formDataToSubmit);
     onClose();
   };
 
@@ -42,6 +60,15 @@ const NewClassForm = ({ onClose, onSubmit }) => {
               value={formData.subject}
               onChange={handleChange}
               required
+            />
+          </div>
+          <div className="form-group">
+            <label>Curriculum (Optional)</label>
+            <input
+              type="file"
+              name="syllabus"
+              accept=".pdf,.doc,.docx"
+              onChange={handleFileChange}
             />
           </div>
           <div className="form-actions">

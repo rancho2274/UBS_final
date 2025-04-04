@@ -1,9 +1,9 @@
 // frontend/src/components/dashboard/VideoConferencing.js
-import React, { useState } from 'react';
+import React from 'react';
 import MeetingNotification from '../dashboard/MeetingNotification';
 
-const VideoConferencing = ({ userType }) => {
-  // For demo purposes, hardcode the meeting URL
+const VideoConferencing = ({ userType, hideUrl = false }) => {
+  // For demo purposes, hardcode the meeting URL but don't display it
   const meetingUrl = "https://go-krushna.daily.co/FgPd5KEtqkLKgCu6vXk3";
   
   return (
@@ -13,7 +13,7 @@ const VideoConferencing = ({ userType }) => {
       </h3>
       
       {userType === "student" && (
-        <MeetingNotification meetingUrl={meetingUrl} />
+        <MeetingNotification meetingUrl={meetingUrl} hideUrl={hideUrl} />
       )}
       
       {userType === "volunteer" ? (
@@ -26,28 +26,9 @@ const VideoConferencing = ({ userType }) => {
             Start Meeting
           </button>
           
-          {meetingUrl && (
-            <div className="mt-4">
-              <p className="text-sm text-gray-600">Share this link with students:</p>
-              <div className="flex mt-2">
-                <input 
-                  type="text" 
-                  value={meetingUrl} 
-                  className="flex-grow border border-gray-300 rounded-l-md py-2 px-3 text-sm" 
-                  readOnly
-                />
-                <button 
-                  className="bg-gray-200 px-4 py-2 rounded-r-md text-sm"
-                  onClick={() => {
-                    navigator.clipboard.writeText(meetingUrl);
-                    alert("Meeting URL copied to clipboard!");
-                  }}
-                >
-                  Copy
-                </button>
-              </div>
-            </div>
-          )}
+          <div className="mt-4">
+            <p className="text-sm text-gray-600">You can share this meeting with your students directly from the session page</p>
+          </div>
         </div>
       ) : (
         <div className="bg-white rounded-lg border border-gray-200 p-6">
